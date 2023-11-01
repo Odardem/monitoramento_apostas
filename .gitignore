@@ -1,0 +1,4 @@
+/venv
+options.py
+secrets.py
+*.txt
