@@ -14,27 +14,40 @@ colocar o arquivo na pasta
 ## Uso
 
 ```bash
-./monitoramento todos True
 
-# returns
+
+./monitoramento todos True
+# returns "todos"
+#[quantidade_bets, quantidade_free_bets, quantidade_vivo, quantidade_prematch, 
+# quantidade_mixed, status_cancelado,status_cashed_out, status_lost, status_open, status_paid]
 [121, 8, 16, 103, 2, 0, 0, 0, 121, 0]
 
-# returns 'words'
-foobar.pluralize('word')
+.\monitoramento.py bets True
+# returns 'bets':
+# quantidade_bets
+121
 
-# returns 'geese'
-foobar.pluralize('goose')
+.\monitoramento.py free True
+# returns 'free':
+# quantidade_free_bets
+8
 
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+.\monitoramento.py vivo True
+# returns 'vivo':
+# quantidade_vivo
+16
+
+.\monitoramento.py prematch True
+# returns 'prematch':
+# quantidade_prematch
+103
+
+.\monitoramento.py mixed True 
+# returns 'mixed':
+# quantidade_mixed
+2
+
 ```
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 
