@@ -1,4 +1,5 @@
 /venv
-options.py
+urls.py
 secrets.py
 *.txt
+!requirements.txt

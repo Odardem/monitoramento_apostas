@@ -4,8 +4,8 @@ import conect_url
 from datetime import datetime,date,timedelta
 import sys
 from collections import Counter
-from options import *
-
+from querys  import *
+from urls import *
 
 
 def bets_att(data,query,url,token,tempo, datainformada):
@@ -72,10 +72,12 @@ def numero_bets(bets:str,verao:bool=False):
     elif bets == 'mixed':
         return quantidade_mixed
     
-    
 if __name__ == '__main__':
 
     token_bet = conect_url.get_token(URL_BETS,QUERY_BETS)
     token_transactions = conect_url.get_token(URL_TRANSACTIONS,QUERY_TRANSACTIONS)
-    #print(sys.argv[1],type(sys.argv[2]))
-    print(numero_bets(sys.argv[1],bool(sys.argv[2])))
+
+    if len(sys.argv) > 2:
+        print(numero_bets(sys.argv[1],bool(sys.argv[2])))
+    else:
+        print(numero_bets(sys.argv[1]))
