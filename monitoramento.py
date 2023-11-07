@@ -31,8 +31,11 @@ def type_bets(lista:list):
     
 def numero_bets(bets:str,verao:bool=False):
     horario_viena = timedelta(hours=5)
+    limite_dia_brasil_viena = datetime.strptime('19:00','%H:%M')
     if verao:
             horario_viena = timedelta(hours=3)
+            limite_dia_brasil_viena = datetime.strptime('21:00','%H:%M')
+
     minuto = 1
     ultimo_minuto = timedelta(minutes=minuto)
     data_hora_atual = datetime.now()
@@ -40,7 +43,6 @@ def numero_bets(bets:str,verao:bool=False):
     ultimo_datetime_viena = data_hora_atual + horario_viena - ultimo_minuto
     ultimo_minuto_viena = datetime.strftime(ultimo_datetime_viena, '%H:%M')
     data_atual = str(date.today())
-    limite_dia_brasil_viena = datetime.strptime('19:00','%H:%M')
     if hora_atual > limite_dia_brasil_viena.time():
         data_atual = str(date.today() + timedelta(days=1))
     bets_hoje = bets_att(data_atual, QUERY_BETS, URL_BETS, token_bet, ultimo_minuto_viena,data_atual)
