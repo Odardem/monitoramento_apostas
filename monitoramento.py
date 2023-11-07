@@ -35,7 +35,6 @@ def numero_bets(bets:str,verao:bool=False):
     if verao:
             horario_viena = timedelta(hours=3)
             limite_dia_brasil_viena = datetime.strptime('21:00','%H:%M')
-
     minuto = 1
     ultimo_minuto = timedelta(minutes=minuto)
     data_hora_atual = datetime.now()
