@@ -3,3 +3,4 @@ urls.py
 secrets.py
 *.txt
 !requirements.txt
+__pycache__
