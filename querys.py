@@ -5,7 +5,8 @@ QUERY_BETS = """query BetQuery{
                     createdAt,
                     state,
                     product,
-                    isFreeBet
+                    isFreeBet,
+                    stake
                 }
             }"""
 
