@@ -35,7 +35,10 @@ def type_bets(lista:list):
 
 def ticket_medio(lista:list):
 
-    return round(sum(a for a in lista)/(len(lista)),2)
+    try: 
+       return round(sum(a for a in lista)/(len(lista)),2)
+    except:
+        return 0
 
 def conversao_horario(data_hora_atual,horario_viena, tempo):
 
